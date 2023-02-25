@@ -55,7 +55,7 @@
                             <td>{{ $contact->contact_type }}</td>
                             <td>{{ $contact->contact }}</td>
                             <td> 
-                                <a class="btn btn-primary btn-sm" href="{{ route('contact.edit',[$user->id, $contact->id]) }}">
+                                <a class="btn btn-primary btn-sm float-right" href="{{ route('contact.edit',[$user->id, $contact->id]) }}">
                                     <i class="bi bi-pencil-square"></i> 
                                     Edit
                                 </a>

@@ -47,7 +47,7 @@
                     <td>{{ $u->age }}</td>
                     <td>{{ $u->country }}</td>
                     <td>
-                    <div class="btn-group">
+                    <div class="btn-group float-right">
                         <a href="{{ route('user.show',$u->id) }}" class='btn btn-secondary btn-sm'><i class="bi bi-eye-fill"></i> Show</a>
                         <a href="{{ route('user.edit',$u->id) }}" class='btn btn-primary btn-sm'><i class="bi bi-pencil-square"></i> Edit</a>
                         <a class='btn btn-danger btn-sm'><i class="bi bi-trash-fill"></i> Delete</a>
