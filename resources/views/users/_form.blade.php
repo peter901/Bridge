@@ -4,13 +4,13 @@
 
     <div class="col-6">
 
-        @foreach ($errors->all() as $error)
+        {{-- @foreach ($errors->all() as $error)
             <div class="alert alert-danger"> 
                 <ul>
                     <li>{{ $error }}</li>
                 </ul> 
             </div>
-        @endforeach
+        @endforeach --}}
         
         <div class="form-group row">
             <label for="first_name" class="col-sm-2 col-form-label">First Name</label>

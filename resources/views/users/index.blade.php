@@ -4,11 +4,7 @@
 
 @section('content')
 
-@if(session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
+@include('partials._messages')
 
 <div class="card-header py-3">
     <a class='btn btn-primary btn-sm' href="{{route('user.create')}}"><i class="bi bi-plus-square"></i> Add User</a>
@@ -52,7 +48,7 @@
                     <td>{{ $u->country }}</td>
                     <td>
                     <div class="btn-group">
-                        <a class='btn btn-secondary btn-sm'><i class="bi bi-eye-fill"></i> Details</a>
+                        <a href="{{ route('user.show',$u->id) }}" class='btn btn-secondary btn-sm'><i class="bi bi-eye-fill"></i> Show</a>
                         <a href="{{ route('user.edit',$u->id) }}" class='btn btn-primary btn-sm'><i class="bi bi-pencil-square"></i> Edit</a>
                         <a class='btn btn-danger btn-sm'><i class="bi bi-trash-fill"></i> Delete</a>
                     </div>

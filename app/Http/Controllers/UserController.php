@@ -68,4 +68,13 @@ class UserController extends Controller
 
         return redirect()->route('user.index')->with('success', 'User successfully updated!');
     }
+
+    public function show($id){
+        $user = User::findOrFail($id);
+        
+        $date_of_birth =  Carbon::parse($user->date_of_birth);
+        $user->age = $date_of_birth->age;
+
+        return view('users.show_user',compact('user'));
+    }
 }
