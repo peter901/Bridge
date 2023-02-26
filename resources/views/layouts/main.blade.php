@@ -36,7 +36,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">Bridge App <sup>2</sup></div>
             </a>
 
             <!-- Divider -->
@@ -347,7 +347,10 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
+                                    <form id="logout_form" method="POST" action={{ route('logout') }} style="display:inline;">
+                                        @csrf
+                                        <span onclick="document.getElementById('logout_form').submit();">Logout</span>
+                                    </form>
                                 </a>
                             </div>
                         </li>

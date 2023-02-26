@@ -5,11 +5,25 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
+    protected $auth_user;
+
+    public function __construct()
+    {
+        if (auth()->check()) {
+            dd(Auth::user());
+        } else {
+            echo 'User is not authenticated.';
+        }
+        
+    }
     public function index(){
 
+        $auth_user = $this->auth_user;
+        
         $users = User::get();
 
         foreach($users as $user){
